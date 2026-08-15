@@ -132,7 +132,7 @@ def root():
         return f"{GREETING} — try GET /notes\n"
     return "notes-api — try GET /notes or POST /notes with, this is to test {\"text\":\"...\"}\n"
 
-
+# testing ci pipeline
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", "8080")))
