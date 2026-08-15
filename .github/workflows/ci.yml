@@ -22,7 +22,7 @@ env:
   #   denied: permission_denied: write_package
   # A distinct package name avoids that entirely.
   IMAGE_NAME: notes-application            # the image this repo publishes
-  GITOPS_REPO: notes-gitops                # the repo that describes what RUNS
+  GITOPS_REPO: note-gitops                # the repo that describes what RUNS
   MANIFEST: apps/notes-api/deployment.yaml # the file in that repo holding the image tag
 
 permissions:
