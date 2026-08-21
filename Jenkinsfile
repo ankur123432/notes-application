@@ -18,7 +18,7 @@ pipeline {
         // published it, so reusing the CI lecture's package name gets you
         //     denied: permission_denied: write_package
         IMAGE_NAME  = 'notes-application'
-        GITOPS_REPO = 'notes-gitops'
+        GITOPS_REPO = 'note-gitops'
         MANIFEST    = 'apps/notes-api/deployment.yaml'
 
         IMAGE = "ghcr.io/${OWNER}/${IMAGE_NAME}"
@@ -104,7 +104,7 @@ pipeline {
         // ───────────── THE HANDOFF: CI ends, CD begins ─────────────
         // The whole point. CI does not deploy — it writes one line into another
         // repo, and a robot inside the cluster does the rest.
-        stage('Deploy: write the tag into notes-gitops') {
+        stage('Deploy: write the tag into note-gitops') {
             steps {
                 withCredentials([usernamePassword(
                         credentialsId: 'gitops-token',
